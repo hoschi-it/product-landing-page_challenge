@@ -1,5 +1,8 @@
 # Responsive Web Design Projects - Build a Product Landing Page
 
+This challenge came from [freeCodeCamp][fcc], which is awesome for
+hands-on learning of topics related to software development.
+
 ## Challenge
 
 Objective: Build a [CodePen.io][codepen] app that is functionally similar to
@@ -67,6 +70,7 @@ You can build your project by forking [this CodePen pen][forkMe]. Or you can use
 [this CDN link][tests] to run the tests in any environment you like.
 
 
+[fcc]: https://www.freecodecamp.org/
 [codepen]: https://codepen.io
 [example]: https://codepen.io/freeCodeCamp/full/RKRbwL.
 [submitUrl]: https://www.freecodecamp.com/email-submit
