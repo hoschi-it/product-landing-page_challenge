@@ -1,0 +1,6 @@
+iframe.video {
+  $width: 100vw - 5vw;
+  display: block;
+  width: $width;
+  height: 9 * $width / 16;
+}
