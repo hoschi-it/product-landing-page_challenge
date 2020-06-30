@@ -3,7 +3,7 @@ before_script:
   - tar -xzvf dart-sass-1.26.9-linux-ia32.tar.gz
   - ls
   - ls dart-sass
-  - export PATH=PATH:$(pwd)/dart-sass/
+  - export PATH=$PATH:$(pwd)/dart-sass/
   
 script:
   - cd src/css/ && sass master.scss
