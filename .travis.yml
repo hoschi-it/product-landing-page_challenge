@@ -1,4 +1,5 @@
 before_script:
+  - pwd
   - wget https://github.com/sass/dart-sass/releases/download/1.26.9/dart-sass-1.26.9-linux-ia32.tar.gz
   - tar -xzvf dart-sass-1.26.9-linux-ia32.tar.gz
   - ls
@@ -6,5 +7,6 @@ before_script:
   - export PATH=$PATH:$(pwd)/dart-sass/
   
 script:
+  - pwd
   - cd src/css/ && sass master.scss
   - rm src/css/master.scss
