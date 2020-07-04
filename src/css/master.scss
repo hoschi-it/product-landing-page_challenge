@@ -65,7 +65,7 @@ nav {
 
   a:hover {
     color: $header_highlight_color;
-    background-color: lighten($header_bgcolor, 50%);
+    background-color: darken($header_bgcolor, 15%);
   }
 }
 
