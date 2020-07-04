@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Rubber ducks</title>
     <link rel="stylesheet" href="css/master.css">
   </head>
 
@@ -13,28 +13,54 @@
       </img>
       <nav id="nav-bar">
         <ul>
-          <li><a class="nav-link" href="#one">One</a></li>
-          <li><a class="nav-link" href="#two">Two</a></li>
-          <li><a class="nav-link" href="#three">Three</a></li>
+          <li><a class="nav-link" href="#who">About</a></li>
+          <li><a class="nav-link" href="#personal">Personalities</a></li>
+          <li><a class="nav-link" href="#three">Be notified</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="one">
-        <h2>Part 1</h2>
-        <p>Content</p>
+      <section id="who">
+        <h2>Who are rubber ducks?</h2>
+        <p>Well, this question is not that simple to answer. Some of them are
+          nice, some don't like company. Some are silly, some are grown up or
+          just boring.</p>
+        <p>Though people tend to judge them, there is not much they have in
+          common:
+        <ul>
+          <li><em>Most of them</em> have yellow coat.</li>
+          <li>They have a beak.</li>
+          <li>They hush, unless they are put under pressure.</li>
+          <li>They can swim on water.</li>
+          <li>They are very patient.</li>
+        </ul>
+        </p>
+        <p>So what is all this "every rubber duck is the same"? It is simply not
+          true.</p>
       </section>
 
-      <section id="two">
+      <section id="personal">
+        <h2>How are their personalities?</h2>
+        <p>There is much, one could say, but this video is a very good
+          describtion.</p>
         <iframe id="video" class="video"
-          src="https://www.youtube.com/embed/v4enYB8IwwE">
+          src="https://www.youtube.com/embed/f5d8pVg3Qtg?start=105">
         </iframe>
       </section>
 
       <section id="three">
-        <h2>Part 3</h2>
-        <p>Content</p>
+        <h2>Be notified</h2>
+        <p>The rubber ducks will be available soon. We will notify you ASAP.</p>
+        <small>Notice: We will not send you any other messages, we will not give
+          your email-adress away nor will we keep it after notifying
+          you.</small>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="email">E-Mail</label>
+          <input id="email" name="email" type="email"
+            placeholder="your.name@email.com">
+          <input id="submit" type="submit" value="Notify me!">
+        </form>
       </section>
     </main>
     <script src="vendor/tests.js"></script>
