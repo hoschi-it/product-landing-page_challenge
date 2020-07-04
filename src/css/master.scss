@@ -2,7 +2,9 @@ $header_bgcolor: #3e60c4;
 $header_txtcolor: white;
 $header_highlight_color: #F0C419;
 $std_whitespace: 10px;
-$video_width: 800px - (4 * $std_whitespace);
+$std_whitespace_before_heading: 10vh;
+$content_frame_width: 500px;
+$video_width: $content_frame_width;
 
 %std_whitespace {
   margin: $std_whitespace;
@@ -17,9 +19,11 @@ body {
 
 header {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 0;
   width: 100vw;
+  justify-content: center;
   align-items: center;
   position: sticky;
   background-color: $header_bgcolor;
@@ -74,6 +78,18 @@ nav {
 
 main {
   @extend %std_whitespace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > section {
+    max-width: $content_frame_width;
+    // compensate place used by sticky header
+    scroll-margin-top: 100px;
+    min-height: 100vh - $std_whitespace_before_heading;
+    //padding-top: $std_whitespace_before_heading;
+    //place-content: end center;
+  }
 
   iframe.video {
     width: $video_width;
@@ -91,4 +107,5 @@ main {
 
 footer {
   @extend %std_whitespace;
+  text-align: center;
 }
