@@ -1,4 +1,4 @@
-$header_bgcolor: green;
+$header_bgcolor: #3e60c4;
 $header_txtcolor: white;
 $header_highlight_color: #F0C419;
 $std_whitespace: 10px;
@@ -18,6 +18,7 @@ body {
 header {
   display: flex;
   flex-wrap: wrap;
+  gap: 0;
   width: 100vw;
   align-items: center;
   position: sticky;
@@ -25,7 +26,7 @@ header {
   top: 0;
 
   > * {
-    padding: $std_whitespace;
+    padding: 0 $std_whitespace;
   }
 
   img#header-img {
@@ -55,7 +56,7 @@ nav {
   li {
     display: inline;
     width: max-content;
-    @extend %std_whitespace;
+    padding: 0 10px;
   }
 
   a {
