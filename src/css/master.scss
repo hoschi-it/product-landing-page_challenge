@@ -1,14 +1,90 @@
-$video_width: 800px;
+$header_bgcolor: green;
+$header_txtcolor: white;
+$header_highlight_color: #F0C419;
+$std_whitespace: 10px;
+$video_width: 800px - (4 * $std_whitespace);
 
-iframe.video {
-  width: $video_width;
-  display: block;
-  height: 9 * $video_width / 16;
+%std_whitespace {
+  margin: $std_whitespace;
+  padding: $std_whitespace;
 }
-@media only screen and (max-width: $video_width) {
-  iframe.video {
-    $width: minmax(95vw, 95vh);
-    width: $width;
-    height: calc(9 * #{$width} / 16);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  align-items: center;
+  position: sticky;
+  background-color: $header_bgcolor;
+  top: 0;
+
+  > * {
+    padding: $std_whitespace;
   }
+
+  img#header-img {
+    height: 50px;
+  }
+
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $header_txtcolor;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+  }
+
+  li {
+    display: inline;
+    width: max-content;
+    @extend %std_whitespace;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: $header_highlight_color;
+    background-color: lighten($header_bgcolor, 50%);
+  }
+}
+
+main {
+  @extend %std_whitespace;
+
+  iframe.video {
+    width: $video_width;
+    display: block;
+    height: 9 * $video_width / 16;
+  }
+  @media only screen and (max-width: $video_width) {
+    iframe.video {
+      $width: calc(98vw - (4 * #{$std_whitespace}));
+      width: $width;
+      height: calc(9 * #{$width} / 16);
+    }
+  }
+}
+
+footer {
+  @extend %std_whitespace;
 }
