@@ -59,7 +59,6 @@ nav {
 
   li {
     display: inline;
-    width: max-content;
     padding: 0 10px;
   }
 
@@ -87,8 +86,6 @@ main {
     // compensate place used by sticky header
     scroll-margin-top: 100px;
     min-height: 100vh - $std_whitespace_before_heading;
-    //padding-top: $std_whitespace_before_heading;
-    //place-content: end center;
   }
 
   iframe.video {
