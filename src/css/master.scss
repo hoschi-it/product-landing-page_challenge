@@ -87,8 +87,9 @@ main {
     // compensate place used by sticky header
     scroll-margin-top: 100px;
     min-height: 100vh - $std_whitespace_before_heading;
-    //padding-top: $std_whitespace_before_heading;
-    //place-content: end center;
+    @media only screen and (max-width: 775px) {
+      scroll-margin-top: 150px;
+    }
   }
 
   iframe.video {
