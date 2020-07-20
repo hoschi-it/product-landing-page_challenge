@@ -1,6 +1,7 @@
 $header_bgcolor: #3e60c4;
 $header_txtcolor: white;
 $header_highlight_color: #F0C419;
+$header_breakpoint: 800px;
 $std_whitespace: 10px;
 $std_whitespace_before_heading: 10vh;
 $content_frame_width: 500px;
@@ -83,8 +84,11 @@ main {
 
   > section {
     max-width: $content_frame_width;
-    // compensate place used by sticky header
+    // compensate place used by sticky header 
     scroll-margin-top: 150px;
+    @media (min-width: $header_breakpoint) {
+      scroll-margin-top: 100px;
+    }
     min-height: 100vh - $std_whitespace_before_heading;
   }
 
@@ -93,7 +97,7 @@ main {
     display: block;
     height: 9 * $video_width / 16;
   }
-  @media only screen and (max-width: $video_width) {
+  @media screen and (max-width: $video_width) {
     iframe.video {
       $width: calc(98vw - (4 * #{$std_whitespace}));
       width: $width;
