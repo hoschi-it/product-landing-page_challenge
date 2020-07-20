@@ -84,7 +84,7 @@ main {
   > section {
     max-width: $content_frame_width;
     // compensate place used by sticky header
-    scroll-margin-top: 100px;
+    scroll-margin-top: 150px;
     min-height: 100vh - $std_whitespace_before_heading;
   }
 
