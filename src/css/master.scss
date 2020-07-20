@@ -23,7 +23,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
   position: sticky;
@@ -90,6 +90,12 @@ main {
       scroll-margin-top: 100px;
     }
     min-height: 100vh - $std_whitespace_before_heading;
+<<<<<<< HEAD
+=======
+    @media only screen and (max-width: 775px) {
+      scroll-margin-top: 150px;
+    }
+>>>>>>> 7aa4c9935811b76fe1dda7400c3a92ca2d26bb8f
   }
 
   iframe.video {
